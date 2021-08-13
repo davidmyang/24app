@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".SettingsActivity">
+
+    <RadioGroup
+        android:id="@+id/idSwitchGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:orientation="vertical"
+        android:padding="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Audio"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="@color/textColor"
+            android:gravity="center_horizontal">
+        </TextView>
+
+        <Switch
+            android:id="@+id/musicSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:text="Music                             "
+            android:textColor="@color/textColor"
+            android:buttonTint="@color/purple_200"
+            app:layout_constraintBottom_toTopOf="@+id/soundEffectsSwitch"
+            app:layout_constraintEnd_toEndOf="@+id/soundEffectsSwitch" />
+
+        <Switch
+            android:id="@+id/soundEffectsSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:text="Sound Effects               "
+            android:textColor="@color/textColor"
+            android:buttonTint="@color/purple_200"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/userStatText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Statistics"
+        android:textColor="@color/textColor"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/infiniteModeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Infinite Mode Problems Solved: 0"
+        android:textColor="@color/textColor"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userStatText"
+        app:layout_constraintBottom_toTopOf="@id/timedModeText"
+        app:layout_constraintVertical_bias="0.7"/>
+
+    <TextView
+        android:id="@+id/timedModeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Timed Mode High Score: 0"
+        android:textColor="@color/textColor"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/infiniteModeText"
+        app:layout_constraintBottom_toTopOf="@id/survivalModeText" />
+
+    <TextView
+        android:id="@+id/survivalModeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Survival Mode High Score: 0"
+        android:textColor="@color/textColor"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.7"/>
+
+    <RadioGroup
+        android:id="@+id/idRGgroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:padding="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--radio button for light theme-->
+        <TextView
+            android:id="@+id/themeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Theme"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="@color/textColor"
+            android:gravity="center_horizontal" />
+
+        <RadioButton
+            android:id="@+id/idRBLight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:textColor="@color/textColor"
+            android:buttonTint="@color/purple_200"
+            android:text="Light Mode" />
+
+        <!--radio button for dark theme-->
+        <RadioButton
+            android:id="@+id/idRBDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:textColor="@color/textColor"
+            android:buttonTint="@color/purple_200"
+            android:text="Dark Mode" />
+
+    </RadioGroup>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"></com.google.android.gms.ads.AdView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

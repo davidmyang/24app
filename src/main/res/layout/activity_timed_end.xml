@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".TimedEndActivity">
+
+    <TextView
+        android:id="@+id/gameOverText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:text="Game Over"
+        android:textColor="@color/purple_200"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/endScoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="196dp"
+        android:text="Score: 0"
+        android:textColor="@color/textColor"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/highScoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="High Score: 0"
+        android:textColor="@color/textColor"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.359" />
+
+    <TextView
+        android:id="@+id/newHighScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="148dp"
+        android:text="New High Score!"
+        android:textColor="@color/purple_200"
+        android:textSize="24dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/playAgainButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/main_button_background"
+        android:src="@drawable/replay"
+        app:layout_constraintBottom_toBottomOf="@id/guideline4"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline3"
+        app:tint="@drawable/button_tint" />
+
+    <ImageButton
+        android:id="@+id/homeButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/main_button_background"
+        android:src="@drawable/home"
+        app:layout_constraintBottom_toBottomOf="@id/guideline2"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/leaderboardButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline"
+        app:tint="@drawable/button_tint" />
+
+    <ImageButton
+        android:id="@+id/leaderboardButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/main_button_background"
+        android:src="@drawable/leaderboard"
+        app:layout_constraintBottom_toBottomOf="@id/guideline2"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/shoppingCartButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/homeButton"
+        app:layout_constraintTop_toTopOf="@id/guideline"
+        app:tint="@drawable/button_tint" />
+
+    <ImageButton
+        android:id="@+id/shoppingCartButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/main_button_background"
+        android:src="@drawable/shopping_cart"
+        app:layout_constraintBottom_toBottomOf="@id/guideline2"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/settingsButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/leaderboardButton"
+        app:layout_constraintTop_toTopOf="@id/guideline"
+        app:tint="@drawable/button_tint" />
+
+    <ImageButton
+        android:id="@+id/settingsButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/main_button_background"
+        android:src="@drawable/settings"
+        app:layout_constraintBottom_toBottomOf="@id/guideline2"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/shoppingCartButton"
+        app:layout_constraintTop_toTopOf="@id/guideline"
+        app:tint="@drawable/button_tint" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+    </com.google.android.gms.ads.AdView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.83" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
